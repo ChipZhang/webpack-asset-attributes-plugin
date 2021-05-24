@@ -1,0 +1,59 @@
+{
+	"name": "@chipzhang/webpack-asset-attributes-plugin",
+	"version": "0.1.0",
+	"description": "Add custom attributes to the asset tags in the generated HTML by html-webpack-plugin",
+	"keywords": [
+		"webpack",
+		"plugin",
+		"webpack-plugin",
+		"html-webpack-plugin"
+	],
+	"homepage": "https://github.com/chipzhang/webpack-asset-attributes-plugin#readme",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/chipzhang/webpack-asset-attributes-plugin"
+	},
+	"bugs": {
+		"url": "https://github.com/chipzhang/webpack-asset-attributes-plugin/issues"
+	},
+	"author": "Chip Zhang <zccoding@gmail.com> (https://github.com/chipzhang)",
+	"license": "AGPL-3.0-only",
+	"engines": {
+		"node": ">=12.0.0"
+	},
+	"main": "index.js",
+	"files": [
+		"index.js",
+		"index.d.ts"
+	],
+	"scripts": {
+		"eslint": "eslint .",
+		"eslint:fix": "eslint --fix .",
+		"prettier": "prettier --write .",
+		"compile": "tsc -p tsconfig.json",
+		"example:start": "webpack serve --config example/webpack.dev.config.js",
+		"example:build": "webpack --config example/webpack.prod.config.js"
+	},
+	"dependencies": {
+		"lodash": "^4.17.21"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.14.3",
+		"@chipzhang/eslint-config": "^0.1.0",
+		"@chipzhang/prettier-config": "^0.1.1",
+		"@chipzhang/tsconfig": "^0.1.4",
+		"@types/lodash": "^4.14.170",
+		"css-loader": "^5.2.5",
+		"eslint": "^7.27.0",
+		"html-webpack-plugin": "^5.3.1",
+		"mini-css-extract-plugin": "^1.6.0",
+		"prettier": "2.3.0",
+		"typescript": "^4.2.4",
+		"webpack": "^5.37.1",
+		"webpack-cli": "^4.7.0",
+		"webpack-dev-server": "^3.11.2"
+	},
+	"peerDependencies": {
+		"webpack": ">=4.0.0"
+	}
+}

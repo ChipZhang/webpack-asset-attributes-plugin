@@ -1,0 +1,5 @@
+
+# project files to ignore
+/index.js
+/index.d.ts
+/example/build/
