@@ -1,6 +1,22 @@
-import * as _ from 'lodash'
 import webpack from 'webpack'
 import HTMLPlugin from 'html-webpack-plugin'
+
+// replace lodash `_.escape()`
+function escapeHTML(t: string): string {
+	if (!t) {
+		return ''
+	}
+
+	const escapes: Record<string, string> = {
+		'&': '&amp;',
+		'<': '&lt;',
+		'>': '&gt;',
+		'"': '&quot;',
+		"'": '&#39;',
+	}
+
+	return t.replace(/[&<>"']/g, (c) => escapes[c])
+}
 
 export interface TagAttributes {
 	[attributeName: string]: string | boolean
@@ -23,7 +39,7 @@ export class AssetAttributesPlugin {
 					if (typeof v === 'boolean') {
 						return v
 					}
-					return _.escape(v)
+					return escapeHTML(v)
 				}
 
 				const scriptAttribs: TagAttributes[] = Object.entries(this.scriptAttribs).map(([k, v]) => ({

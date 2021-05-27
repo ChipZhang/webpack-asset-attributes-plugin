@@ -1,6 +1,5 @@
 # ignore dot folders but not dot files
 .*/
-
 # project files to ignore
 /index.js
 /index.d.ts

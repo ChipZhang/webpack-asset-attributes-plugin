@@ -1,6 +1,6 @@
 {
 	"name": "@chipzhang/webpack-asset-attributes-plugin",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Add custom attributes to the asset tags in the generated HTML by html-webpack-plugin",
 	"keywords": [
 		"webpack",
@@ -34,26 +34,28 @@
 		"example:start": "webpack serve --config example/webpack.dev.config.js",
 		"example:build": "webpack --config example/webpack.prod.config.js"
 	},
-	"dependencies": {
-		"lodash": "^4.17.21"
-	},
+	"dependencies": {},
 	"devDependencies": {
 		"@babel/core": "^7.14.3",
-		"@chipzhang/eslint-config": "^0.1.0",
-		"@chipzhang/prettier-config": "^0.1.1",
-		"@chipzhang/tsconfig": "^0.1.4",
-		"@types/lodash": "^4.14.170",
-		"css-loader": "^5.2.5",
+		"@babel/eslint-parser": "^7.14.3",
+		"@babel/eslint-plugin": "^7.13.16",
+		"@chipzhang/eslint-config": "^0.1.2",
+		"@chipzhang/prettier-config": "^0.1.2",
+		"@chipzhang/tsconfig": "^0.1.6",
+		"@typescript-eslint/eslint-plugin": "^4.25.0",
+		"@typescript-eslint/parser": "^4.25.0",
+		"css-loader": "^5.2.6",
 		"eslint": "^7.27.0",
 		"html-webpack-plugin": "^5.3.1",
 		"mini-css-extract-plugin": "^1.6.0",
 		"prettier": "2.3.0",
-		"typescript": "^4.2.4",
+		"typescript": "4.2.4",
 		"webpack": "^5.37.1",
 		"webpack-cli": "^4.7.0",
 		"webpack-dev-server": "^3.11.2"
 	},
 	"peerDependencies": {
-		"webpack": ">=4.0.0"
+		"webpack": "^4.0.0 || ^5.0.0",
+		"html-webpack-plugin": "^4.0.0 || ^5.0.0"
 	}
 }
